@@ -30,6 +30,10 @@ summaryLength = 0
 enableDefault = true
 
 [[module.mounts]]
+source = "assets"
+target = "assets"
+
+[[module.mounts]]
 source = "themes/congo/assets"
 target = "assets"
 
