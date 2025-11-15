@@ -13,7 +13,7 @@ I came across the concept of the Zettelkasten system through [Odyseas' video](ht
 ### The Setup for the Blog 
 I created a new folder in my vault labeled "008 - Posts". The name is pretty self-explanatory – this is where I will be storing all my blogposts. 
 
-![[Pasted image 20251115181704.png]]
+![Pasted image 20251115195649](/attachments/Pasted%20image%2020251115195649.png)
 
 In the near future, I plan on improving the integration of Hugo with Obsidian through [oscarmlage's](https://oscarmlage.com/posts/hugo-and-obsidian/) method.
 
