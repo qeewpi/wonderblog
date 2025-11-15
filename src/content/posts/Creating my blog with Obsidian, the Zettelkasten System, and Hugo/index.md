@@ -11,9 +11,9 @@ A few months ago I began utilizing Obsidian for my note-taking. It initially ser
 I came across the concept of the Zettelkasten system through [Odyseas' video](https://www.youtube.com/watch?v=hSTy_BInQs8), where he provides an in-depth guide on how he set up his note-taking system in Obsidian. Since then, I've been using this system, with just the slightest alterations to fit my workflow.
 
 ### The Setup for the Blog 
-I created a new folder in my vault labeled "Posts". The name is pretty self-explanatory – this is where I will be storing all my blogposts. 
+I created a new folder in my vault labeled "008 - Posts". The name is pretty self-explanatory – this is where I will be storing all my blogposts. 
 
-![Image](/images/Pasted%20image%2020251115130838.png)
+![[Pasted image 20251115181704.png]]
 
 In the near future, I plan on improving the integration of Hugo with Obsidian through [oscarmlage's](https://oscarmlage.com/posts/hugo-and-obsidian/) method.
 
