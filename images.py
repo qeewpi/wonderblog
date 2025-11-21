@@ -5,7 +5,7 @@ from urllib.parse import unquote
 
 # --- Configuration ---
 posts_dir = r"C:\Users\Ashley-PC\Documents\wonderblog\src\content\posts"
-obsidian_attachments_source = r"C:\Users\Ashley-PC\Documents\Ashley in Wonderland\attachments"
+obsidian_attachments_source = r"C:\Users\Ashley-PC\Documents\Ashley in Wonderland\000 - Attachments"
 hugo_attachments_destination = r"C:\Users\Ashley-PC\Documents\wonderblog\src\content\attachments"
 hugo_final_url_path = "/attachments/" # The final URL path for links
 
