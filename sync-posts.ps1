@@ -48,11 +48,10 @@ try {
     } | Get-Unique
 
     if ($postsToProcess.Count -eq 0) {
-        Write-Host "No changes found in $postsDirectory." -ForegroundColor Yellow
+        Write-Host "No new file changes found in $postsDirectory." -ForegroundColor Yellow
     } else {
         # STEP 3: PROCESS EACH CHANGED POST
         # ----------------------------------------------------------------
-        $commitsMade = 0
         foreach ($postFolder in $postsToProcess) {
             # Find the primary .md file in the directory to get the title
             $mdFile = Get-ChildItem -Path $postFolder -Filter "*.md" | Select-Object -First 1
@@ -87,30 +86,42 @@ try {
                 $commitMsg = "feat(blog): add new post '$title'"
                 git commit -m $commitMsg
                 Check-Git-Success
-                $commitsMade++
             }
             catch {
                 Write-Warning "Failed to add or commit post: '$title'. Please check for git conflicts or errors."
                 Write-Warning $_.Exception.Message
             }
         }
+    }
 
-        # STEP 4: REVIEW & PUSH
-        # ----------------------------------------------------------------
-        if ($commitsMade -gt 0) {
-            Write-Host "`n--- Review Commits ---" -ForegroundColor Cyan
-            Write-Host "The following $commitsMade commit(s) will be pushed:"
-            git log "$($remote)/$($branch)..HEAD" --oneline
-            Check-Git-Success
+    # STEP 4: CHECK FOR PENDING COMMITS AND PUSH
+    # ----------------------------------------------------------------
+    Write-Host "`nChecking for local commits that need to be pushed..." -ForegroundColor Cyan
+    $commitsToPush = git rev-list --count "$($remote)/$($branch)..HEAD"
+    Check-Git-Success
 
-            Write-Host "`nPushing changes to $remote $branch..." -ForegroundColor Cyan
-            git push -u $remote $branch
-            Check-Git-Success
+    # Trim potential whitespace from command output
+    $commitsToPush = $commitsToPush.Trim()
 
-            Write-Host "`nSuccessfully pushed all commits!" -ForegroundColor Green
-        } else {
-            Write-Host "`nNo new commits were made. Nothing to push." -ForegroundColor Yellow
-        }
+    if ($commitsToPush -gt 0) {
+        Write-Host "Found $commitsToPush local commit(s) to push." -ForegroundColor Green
+
+        Write-Host "`n[Step 4.1] Syncing with remote repository..." -ForegroundColor Cyan
+        git pull --rebase --autostash $remote $branch
+        Check-Git-Success
+        Write-Host "Sync successful." -ForegroundColor Green
+
+        Write-Host "`n[Step 4.2] Reviewing commits to be pushed..." -ForegroundColor Cyan
+        git log "$($remote)/$($branch)..HEAD" --oneline
+        Check-Git-Success
+
+        Write-Host "`n[Step 4.3] Pushing changes to $remote $branch..." -ForegroundColor Cyan
+        git push -u $remote $branch
+        Check-Git-Success
+
+        Write-Host "`nSuccessfully pushed all commits!" -ForegroundColor Green
+    } else {
+        Write-Host "`nNo new commits to push. Everything is up-to-date." -ForegroundColor Yellow
     }
 }
 catch {
