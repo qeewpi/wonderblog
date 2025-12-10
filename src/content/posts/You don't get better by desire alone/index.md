@@ -10,7 +10,7 @@ Wanting to be better isn't enough.
 
 Wanting to win isn't enough.
 
-But thinking about the steps to get to your destination is enough.
+But having the courage to take the steps to your destination is enough.
 
 Instead of hyper-focusing on results, you need to focus on the process.
 
