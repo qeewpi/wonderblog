@@ -83,7 +83,14 @@ try {
                 git add "$postFolder/"
                 Check-Git-Success
 
-                $commitMsg = "feat(blog): add new post '$title'"
+                # Determine the change type for the commit message
+                $postStatus = git status $postFolder --porcelain
+                $commitAction = "edit" # Default to edit
+                if ($postStatus -match '^\?\?') {
+                    $commitAction = "add new"
+                }
+
+                $commitMsg = "feat(blog): $commitAction post '$title'"
                 git commit -m $commitMsg
                 Check-Git-Success
             }
