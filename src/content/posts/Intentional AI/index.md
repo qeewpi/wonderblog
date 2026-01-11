@@ -7,53 +7,6 @@ tags: []
 
 > A framework for deciding when and how to use AI based on your skill level and objectives.
 
-## Table of Contents
-
-### Core Concepts
-- [Core Principles](#core-principles)
-  - [1. AI as Learning Accelerator](#1-ai-as-learning-accelerator)
-  - [2. The Socratic Method](#2-the-socratic-method)
-  - [3. Rubber Duck Debugging](#3-rubber-duck-debugging)
-  - [4. Code Ownership & Write Your Own Code](#4-code-ownership--write-your-own-code)
-- [The Bias Problem](#the-bias-problem)
-
-### Learning Strategies
-- [Learning Strategies](#learning-strategies)
-  - [1. The "Write First" Rule](#1-the-write-first-rule)
-  - [2. The "Research First" Protocol](#2-the-research-first-protocol)
-  - [3. The "Comparison Method"](#3-the-comparison-method)
-  - [4. The "Explain Back" Technique](#4-the-explain-back-technique-rubber-ducking-with-ai)
-  - [5. The "Challenge Everything" Mindset](#5-the-challenge-everything-mindset-socratic-questioning)
-
-### Implementation
-- [Implementation Approaches](#implementation-approaches)
-  - [Approach A: Research-First](#approach-a-research-first-maximum-learning)
-  - [Approach B: Guided Discovery](#approach-b-guided-discovery-balanced)
-  - [Approach C: Example-Driven Learning](#approach-c-example-driven-learning-study--recreate)
-  - [Approach D: Expert Mode](#approach-d-expert-mode-for-experienced-developers-only)
-- [What to Delegate vs. What to Write Yourself](#what-to-delegate-vs-what-to-write-yourself)
-  - [For Beginners/Learners](#for-beginnerslearners-write-everything-yourself)
-  - [For Experts](#for-experts-selective-delegation)
-  - [Domain-Focused Learning Strategy](#domain-focused-learning-strategy)
-
-### Active Learning
-- [Active Learning Techniques](#active-learning-techniques)
-- [Weekly Learning Checkpoints](#weekly-learning-checkpoints)
-
-### Project Planning
-- [Project Phase Strategy](#project-phase-strategy)
-- [Decision Framework](#decision-framework)
-
-### Workflow Integration
-- [Workflow Integration](#workflow-integration-if-using-structured-workflows)
-- [TDD Workflow for Learning](#tdd-workflow-for-learning-if-using-tdd)
-
-### Reference
-- [Common Pitfalls to Avoid](#common-pitfalls-to-avoid)
-- [Measuring Success](#measuring-success)
-- [Quick Reference Checklist](#quick-reference-checklist)
-- [Remember](#remember)
-
 ---
 
 ## Core Principles
