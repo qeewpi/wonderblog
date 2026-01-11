@@ -1,9 +1,9 @@
 ---
 title: Creating my blog with Obsidian, the Zettelkasten System, and Hugo
 date: 2025-11-15T17:57:30+08:00
+lastmod: 2026-01-11T20:15:00+08:00
 draft: false
 tags:
-lastmod: 2026-1-11T20:15:00+08:00
 ---
 *Took me a while, but here I am, documenting my entire process – from my note-taking system to the creation of my blog. Hopefully this comes helpful to anyone who may come across this.*
 
