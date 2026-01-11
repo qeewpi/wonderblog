@@ -1,9 +1,10 @@
 ---
 title: Intentional AI
 date: 2026-01-11T01:40:59+08:00
-draft: true
+draft: false
 tags: []
 ---
+
 # Intentional AI
 > A framework for deciding when and how to use AI based on your skill level and objectives.
 
