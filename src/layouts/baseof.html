@@ -52,9 +52,48 @@
       {{ end }}
     </div>
     {{ if .Store.Get "hasMermaid" }}
+      <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
       <script type="module">
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
-        mermaid.initialize({ startOnLoad: true });
+        
+        const isDark = document.documentElement.dataset.defaultAppearance === 'dark' || 
+                       (document.documentElement.dataset.autoAppearance === 'true' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        
+        mermaid.initialize({ 
+          startOnLoad: false,
+          theme: isDark ? 'dark' : 'default',
+          securityLevel: 'loose'
+        });
+        
+        // Wait for DOM
+        document.addEventListener('DOMContentLoaded', async () => {
+             await mermaid.run({
+                querySelector: '.mermaid'
+             });
+             
+             // Initialize svg-pan-zoom on all rendered SVGs
+             document.querySelectorAll('.mermaid-container svg').forEach(svg => {
+                // strict sizing for container
+                svg.style.width = '100%';
+                svg.style.height = '100%';
+                svg.style.maxWidth = 'none';
+                
+                // Clear any height attributes set by mermaid to allow scaling
+                svg.removeAttribute('height');
+
+                svgPanZoom(svg, {
+                  zoomEnabled: true,
+                  controlIconsEnabled: true,
+                  fit: true,
+                  center: true,
+                  minZoom: 0.1, // Allow zooming out further
+                  maxZoom: 15
+                });
+                
+                // Show the diagram
+                svg.parentElement.style.visibility = 'visible';
+             });
+        });
       </script>
     {{ end }}
   </body>
