@@ -162,7 +162,7 @@ Let me break down what each script does:
 
 ---
 
-##### 🖼️ `images.py` - Image Asset Management
+##### `images.py` - Image Asset Management
 
 **Purpose:** Ensures all images referenced in my blog posts are present in the Hugo project and properly linked.
 
@@ -276,7 +276,7 @@ else:
 
 ---
 
-##### 📝 `sync-posts.ps1` - Git Automation
+##### `sync-posts.ps1` - Git Automation
 
 **Purpose:** Automatically commits and pushes each blog post individually with meaningful commit messages.
 
@@ -466,7 +466,7 @@ finally {
 
 ---
 
-##### 🚀 `publish.ps1` - Master Orchestrator
+##### `publish.ps1` - Master Script
 
 **Purpose:** One-click publishing workflow that runs the entire pipeline.
 
