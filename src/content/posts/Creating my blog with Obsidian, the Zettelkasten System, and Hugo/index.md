@@ -2,9 +2,11 @@
 title: Creating my blog with Obsidian, the Zettelkasten System, and Hugo
 date: 2025-11-15T17:57:30+08:00
 draft: false
-tags: []
+tags:
+lastmod: 2026-1-11T20:15:00+08:00
 ---
 *Took me a while, but here I am, documenting my entire process – from my note-taking system to the creation of my blog. Hopefully this comes helpful to anyone who may come across this.*
+
 ## Obsidian
 A few months ago I began utilizing Obsidian for my note-taking. It initially served my needs sufficiently. However, it came to a point where I felt a need for a more "concrete" system – one that essentially allowed me to have a "wiki" for my knowledge as well as improve my ability to synthesize new ideas.
 
