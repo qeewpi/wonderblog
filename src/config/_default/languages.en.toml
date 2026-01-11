@@ -15,8 +15,8 @@ title = "Ashley Manalo"
 [params.author]
   name = "Ashley Manalo"
   image = "img/author.jpg"
-  headline = "I'm only human"
-  bio = "A little bit about you"
+  headline = "Creation is evidence of life"
+  bio = "I'm Ashley, a recent CS graduate from Mapua University, currently building with Java and Spring. I'm driven by the incremental progress of learning, modeling solutions to problems, and documenting the knowledge I come across."
   links = [
   #   { email = "mailto:hello@your_domain.com" },
   #   { link = "https://link-to-some-website.com/" },
