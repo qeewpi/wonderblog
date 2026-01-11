@@ -79,16 +79,16 @@ try {
             Write-Host "Processing: $title (from $postFolder)" -ForegroundColor Green
             
             try {
-                # Use the clean, relative path for 'git add'
-                git add "$postFolder/"
-                Check-Git-Success
-
-                # Determine the change type for the commit message
+                # Determine the change type BEFORE staging (untracked files show as ??)
                 $postStatus = git status $postFolder --porcelain
                 $commitAction = "edit" # Default to edit
                 if ($postStatus -match '^\?\?') {
                     $commitAction = "add new"
                 }
+
+                # Use the clean, relative path for 'git add'
+                git add "$postFolder/"
+                Check-Git-Success
 
                 $commitMsg = "feat(blog): $commitAction post '$title'"
                 git commit -m $commitMsg
