@@ -4,9 +4,13 @@
 
 baseURL = "/"
 defaultContentLanguage = "en"
+enableGitInfo = true
 
 enableRobotsTXT = true
 summaryLength = 0
+
+[frontmatter]
+  lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
 
 [pagination]
   pagerSize = 10
