@@ -5,7 +5,6 @@ draft: false
 tags: []
 ---
 
-# Intentional AI
 > A framework for deciding when and how to use AI based on your skill level and objectives.
 
 ## Table of Contents
