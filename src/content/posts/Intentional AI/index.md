@@ -215,7 +215,7 @@ Rubber Duck Debugging is a method where you explain your code line-by-line to an
 ### 4. Code Ownership & Write Your Own Code
 **Code is a social contract - you must write and own it yourself, not generate it blindly.**
 
-> "Code isn't human readable machine instructions - It's machine readable human instructions. In a very real sense of the word, it's the prompt. It's the social contract of the product. As an engineer your job is to be an expert in that social contract and manipulate it at need. People who think engineer's job is to produce code are totally ignorant."
+> Code isn't human readable machine instructions - It's machine readable human instructions. In a very real sense of the word, it's the prompt. It's the social contract of the product. As an engineer your job is to be an expert in that social contract and manipulate it at need. People who think engineer's job is to produce code are totally ignorant.
 
 #### **Why Code Ownership Matters**
 
