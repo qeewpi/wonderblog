@@ -1,7 +1,7 @@
 ---
 title: Intentional AI
 date: 2026-01-11T01:40:59+08:00
-draft: false
+draft: true
 tags: []
 ---
 
